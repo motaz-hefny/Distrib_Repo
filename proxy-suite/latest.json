@@ -1,0 +1,6 @@
+{
+  "version": "0.1.14",
+  "releaseDate": "2026-04-25",
+  "changelog": "Repository migration to Distrib_Repo. Platform detection and update logic improvements.",
+  "downloadUrl": "https://github.com/motaz-hefny/Distrib_Repo/tree/main/proxy-suite/dist"
+}
