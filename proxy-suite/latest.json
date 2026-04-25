@@ -1,6 +1,6 @@
 {
-  "version": "0.1.14",
+  "version": "0.1.15",
   "releaseDate": "2026-04-25",
-  "changelog": "Repository migration to Distrib_Repo. Platform detection and update logic improvements.",
+  "changelog": "Stability improvements, over 130 TypeScript errors resolved. Optimized main process reliability and updater compatibility.",
   "downloadUrl": "https://github.com/motaz-hefny/Distrib_Repo/tree/main/proxy-suite/dist"
 }
