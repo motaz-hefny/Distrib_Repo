@@ -1,5 +1,5 @@
 {
-  "version": "1.4.8",
+  "version": "1.5.0",
   "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "Fix git identity in release CI | Clean notes extraction from CHANGELOG"
+  "notes": "Sorting controls for judge list: — sort judge endpoints by score (high-low or low-high), name (A-Z), response time, or status. Dropdown menu located in the stats bar. | Score breakdown tooltip: — hover over any judge's score to see a detailed breakdown: IP Detection (+40), Header Analysis (+35), Anonymity (+25), Speed bonus (+20/-20), and final clamped total. | Capability explanation tooltips: — hover over IP, Headers, or Anonymity badges to learn what each capability detects and why it matters."
 }
