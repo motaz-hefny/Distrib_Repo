@@ -1,5 +1,5 @@
 {
-  "version": "1.6.3",
+  "version": "1.6.4",
   "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "Update check broken: invalid JSON in latest.json: — the `update-latest-json.sh` script used raw shell variable interpolation (`\"$NOTES\"`) in a heredoc, which broke JSON when release notes contained double quotes (e.g., `The \"Showing\" label`). Switched to `jq` which properly escapes all special characters. | Proxy Checker blank screen during load: — added a loading spinner with \"Loading proxies...\" message that shows while `fetchProxies` is fetching data from the database, so the user sees immediate feedback instead of a blank/empty state. | `update-latest-json.sh`: — now uses `jq` instead of heredoc for JSON generation, ensuring proper escaping of all release notes content."
+  "notes": "Tab switching blocked during proxy check: — the `checkProxies` thunk was `await`-ing the entire batch check IPC call, keeping the thunk pending until all proxies were checked. Changed to fire-and-forget: the check starts immediately and the thunk resolves right away. Tab navigation is now responsive during checks. Check lifecycle (`started`/`progress`/`complete`) continues to be handled by IPC events. | Discovery Engine search input lacks focus indicator: — added `autoFocus`, a `useRef` with `useEffect` focus, and a blinking cursor cue so the input is immediately ready for typing when the panel opens. | Proxy Chains rename input focus: — added `useRef` fallback to ensure the text input gains focus when rename mode is activated."
 }
