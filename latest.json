@@ -1,5 +1,5 @@
 {
-  "version": "1.6.1",
+  "version": "1.6.2",
   "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "Proxy list truncated to 10,000 rows: — `IPCManager.tsx` dispatched `fetchProxies({ limit: 10000 })` after every check/grab completion, overwriting the full proxy list with only 10,000 rows. Fixed by removing the hardcoded limit so all proxies load correctly. | Proxy Checker table capped at 10,000 rows: — removed `slice(0, 10000)` from table rendering so all loaded proxies are visible. | Total proxy count mismatch between Dashboard and Proxy Checker: — Proxy Checker now uses the `fetchProxies` thunk (which sets both `proxies` and `totalProxies`) instead of raw `db.query` + `setProxies` (which only set `proxies`)."
+  "notes": "Proxy Checker page blank/crash: — `fetchProxies({})` loaded ALL proxies without a limit, and the display `slice(0, 10000)` was removed, causing the renderer to freeze with 16k+ table rows. Restored `slice(0, 10000)` for display and added `limit: 100000` to the data load. The "Showing" label now indicates when the display is capped. | GitHub Actions Node.js 20 deprecation: — updated `node-version` from 20 to 22 in release workflow, addressing the upcoming June 2nd 2026 deprecation of Node.js 20 on GitHub Actions runners. | IPCManager `fetchProxies` limit: — uses `limit: 100000` instead of no-limit for defense-in-depth while still loading all proxies correctly."
 }
