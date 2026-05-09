@@ -1,5 +1,5 @@
 {
-  "version": "1.6.2",
+  "version": "1.6.3",
   "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "Proxy Checker page blank/crash: — `fetchProxies({})` loaded ALL proxies without a limit, and the display `slice(0, 10000)` was removed, causing the renderer to freeze with 16k+ table rows. Restored `slice(0, 10000)` for display and added `limit: 100000` to the data load. The "Showing" label now indicates when the display is capped. | GitHub Actions Node.js 20 deprecation: — updated `node-version` from 20 to 22 in release workflow, addressing the upcoming June 2nd 2026 deprecation of Node.js 20 on GitHub Actions runners. | IPCManager `fetchProxies` limit: — uses `limit: 100000` instead of no-limit for defense-in-depth while still loading all proxies correctly."
+  "notes": "Update check broken: invalid JSON in latest.json: — the `update-latest-json.sh` script used raw shell variable interpolation (`\"$NOTES\"`) in a heredoc, which broke JSON when release notes contained double quotes (e.g., `The \"Showing\" label`). Switched to `jq` which properly escapes all special characters. | Proxy Checker blank screen during load: — added a loading spinner with \"Loading proxies...\" message that shows while `fetchProxies` is fetching data from the database, so the user sees immediate feedback instead of a blank/empty state. | `update-latest-json.sh`: — now uses `jq` instead of heredoc for JSON generation, ensuring proper escaping of all release notes content."
 }
