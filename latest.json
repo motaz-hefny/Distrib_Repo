@@ -1,5 +1,5 @@
 {
-  "version": "1.6.10",
+  "version": "1.6.11",
   "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "SearXNG \"403 Forbidden\" from local Docker instance: — the default SearXNG config has `searchdns: true`, which does a DNS-based client IP check. Connections from Docker bridge IPs (172.17.x.x) fail this check, returning 403. Updated all Docker commands in Help docs and Settings description to include `-e SEARXNG_DNS__SEARCH_DNS=false`. Added a dedicated \"Why does SearXNG return 403 Forbidden?\" Q&A in all 3 languages (EN/AR/ARZ) that explains the root cause and fix. | SearXNG 403 log message now suggests the fix: — when a SearXNG request returns 403, the \"Blocked on SearXNG Discovery\" log line now appends `| FIX: SearXNG needs searchdns=false. Add -e SEARXNG_DNS__SEARCH_DNS=false to your docker run command`, so the user sees the solution directly in the log."
+  "notes": "SearXNG \"403 Forbidden\" root cause correction: — the 403 was incorrectly attributed to `searchdns: true`. The actual cause: SearXNG's default `search.formats` only allows `html`, but the app requests `format=json`, which SearXNG rejects with 403 by design. All Help docs (EN/AR/ARZ), Settings description, and the in-app log message now correctly instruct users to add `json` to `search.formats` in `settings.yml`. The previous `-e SEARXNG_DNS__SEARCH_DNS=false` advice has been removed."
 }
