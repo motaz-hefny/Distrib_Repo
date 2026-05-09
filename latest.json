@@ -1,5 +1,5 @@
 {
-  "version": "1.6.12",
+  "version": "1.6.13",
   "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "Input focus unreliability in text fields: — the rename input in Proxy Chains and the Discovery Engine keyword input sometimes refused keystrokes after appearing. Root cause: the ref callback fired once during mount, but if an async state update re-rendered the component, the focus was lost without recovery. Fix: added `autoFocus` (native HTML behavior), explicit `focus()` in `onMouseDown`, and a `requestAnimationFrame` fallback in the ref callback that re-focuses after the browser's render cycle if focus was lost."
+  "notes": "Input focus diagnostic logging: — both the Discovery Engine keyword input and Proxy Chains rename input now log every focus, blur, mount, unmount, and keydown event to the DevTools console. Also includes a 1-second focus watcher that re-focuses the input if focus is stolen by an async re-render (up to 10 attempts at 100ms intervals). Open DevTools (Ctrl+Shift+I) and look for `[DEBUG] SearchInput` / `[DEBUG] RenameInput` messages to help diagnose the intermittent focus issue."
 }
