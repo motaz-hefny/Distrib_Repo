@@ -1,5 +1,5 @@
 {
-  "version": "1.6.5",
+  "version": "1.6.6",
   "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "Linux start menu icon missing: — electron-builder icon path was `build/icon.png` but `buildResources` directory is `build`, making the effective path `build/build/icon.png` (non-existent). Fixed to `icon.png` (relative to buildResources). | Source code published to public Distrib_Repo: — removed the `git archive` step and `dist/source/source.tar.gz` from release workflow assets. The public repo now only receives binaries (`.AppImage`, `.deb`, `.tar.gz`). Note: GitHub auto-generates `Source code (zip)` and `Source code (tar.gz)` for every release and cannot be disabled. | `npm run build:local` script: — builds the app and packages only the `.deb` target locally (`electron-builder --linux deb --publish never`), so you can install without redownloading from GitHub."
+  "notes": "Missing Proxy Chains sidebar icon: — `GitBranch` was not imported or registered in `MasterPanel.tsx`'s `iconMap`, causing the Proxy Chains tab to render without an icon in the navigation sidebar. Added import and mapping. | Proxy Chains rename input focus reliability: — the focus call now wraps in `setTimeout(50ms)` to wait for the DOM render cycle. This is a fallback complement to the existing `autoFocus` attribute, ensuring focus lands even when React batches updates differently."
 }
