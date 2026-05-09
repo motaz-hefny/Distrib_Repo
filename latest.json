@@ -1,5 +1,5 @@
 {
-  "version": "1.6.13",
+  "version": "1.6.14",
   "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "Input focus diagnostic logging: — both the Discovery Engine keyword input and Proxy Chains rename input now log every focus, blur, mount, unmount, and keydown event to the DevTools console. Also includes a 1-second focus watcher that re-focuses the input if focus is stolen by an async re-render (up to 10 attempts at 100ms intervals). Open DevTools (Ctrl+Shift+I) and look for `[DEBUG] SearchInput` / `[DEBUG] RenameInput` messages to help diagnose the intermittent focus issue."
+  "notes": "Discovery Engine search input becomes unreliable after deduplication: — clicking \"Deduplicate\" in Proxy Sources calls `refreshSources()` which dispatches `setSources()` to Redux, triggering a component re-render. The search input was conditionally rendered via `{isDiscoveryOpen && (...)}`, which caused React to remove and re-add the input's DOM node during the re-render, permanently destabilizing it. Fix: replaced conditional rendering with CSS `hidden` class (keeps DOM nodes always mounted, hides via `display: none`), stabilized the `ref` callback by removing the unnecessary `isDiscoveryOpen` dependency from `useCallback`, and added a `useEffect` that focuses the input when the panel opens."
 }
