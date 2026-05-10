@@ -1,5 +1,5 @@
 {
-  "version": "1.6.35",
+  "version": "1.6.36",
   "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "Conditional keyboard reset — no stacking change when window is unfocused: — `blur()`+`focus()` was the only proven GLib handler fix, but `blur()` generates X11 FocusOut which lowers the window on this WM. Fix: skip `blur()` when the window doesn't already have focus — `focus()` alone generates FocusIn (re-registering GLib handlers) without any stacking change. Only applies `blur()`+`focus()` when the window is focused (user is actively using it), which is a necessary tradeoff since `XSetInputFocus` is a no-op on windows that already have focus. | Keyboard reset after batch operations: — refactored keyboard reset into a shared function used by both the `window:reset-keyboard` IPC handler and the `db:batch` IPC handler, ensuring consistent behavior and avoiding code duplication."
+  "notes": "Keyboard reset uses `setFocusable` guard before `blur()` to prevent WM stacking change: — when a focused window loses X11 focus (`blur()`), the WM typically raises the next focusable window, pushing ours behind it. Fix: call `setFocusable(false)` before `blur()`, setting `WM_HINTS.input=False`. When FocusOut fires, the WM sees the window is marked as not wanting input and (on this WM) does not raise another window. Then `setFocusable(true)` + `focus()` restores focus with a genuine FocusIn that re-registers GLib keyboard handlers — without any stacking change."
 }
