@@ -1,5 +1,5 @@
 {
-  "version": "1.6.40",
+  "version": "1.7.0",
   "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "Release 1.6.40"
+  "notes": "Keyboard reset uses GDK `setEnabled` + X11 `setFocusable` toggle with yield instead of blur/focus: — replaced the old `setFocusable(false)+blur()+setFocusable(true)+focus()` sequence (which changed window Z‑order) with `setEnabled(false)+setFocusable(false)` → `setImmediate` yield → `setFocusable(true)+setEnabled(true)+webContents.focus()`. Disables both GTK sensitivity (GDK) and WM_HINTS.input (X11), lets GLib process both disconnections, then re-enables and forces Chromium to register fresh keyboard signal handlers. Z‑order impact: none — the window stays in place. | Batch SQLite operations broken into 100-item chunks with `setImmediate` yields: — `performBatchOperation` for `delete`, `updateStatus`, `updateProtocol`, and `check` now processes proxies in batches of 100, yielding to the event loop between each batch via `setImmediate`. | Proxy checker yields to full event loop between batches: — replaced `await this.delay(20)` with `await new Promise(resolve => setImmediate(resolve))` in `processQueue()`."
 }
