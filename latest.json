@@ -1,5 +1,5 @@
 {
-  "version": "1.6.37",
+  "version": "1.6.38",
   "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "Keyboard reset uses `xdotool` to focus root window, bypassing WM stacking entirely: — `setFocusable` guard before `blur()` did not prevent the WM from raising another window on FocusOut. Root cause: Electron's `blur()` calls `XSetInputFocus(PointerRoot)` which enters pointer-follow mode, prompting the WM to find and raise the next client window. Fix: use `xdotool windowfocus root` instead of Electron's `blur()`. Focusing the X11 root window (which is not a client window) generates FocusOut on our window but no FocusIn on any other client — the WM has no window to raise. Then `xdotool windowfocus OUR_WINDOW` generates FocusIn, re-registering GLib keyboard handlers with no stacking change. Falls back to `setFocusable(false)+blur()+focus()` if `xdotool` is not installed."
+  "notes": "Release 1.6.38"
 }
