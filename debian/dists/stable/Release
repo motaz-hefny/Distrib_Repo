@@ -1,0 +1,16 @@
+Origin: MoTekLab
+Label: MetaForge
+Suite: stable
+Codename: stable
+Architectures: amd64
+Components: main
+Description: MoTekLab MetaForge APT repository - stable releases
+Date: Wed, 03 Jun 2026 21:01:37 +0000
+MD5Sum:
+ 5851169ca22f3fb84fe037ddbd05de2c              354 main/binary-amd64/Packages.gz
+SHA1:
+ fa743e0dcf15bb888e5eb31868c11b4356a957fa              354 main/binary-amd64/Packages.gz
+SHA256:
+ d77c22aaa834de3000027d723d881609ba11d333e6cfad5035145b7d4c0f6e5f              354 main/binary-amd64/Packages.gz
+SHA512:
+ 871e069c04a0dcb43bca99ee5a6ac9c4be1c4ef9af533b5558e606e0109c43497acb9cd575d67c889ec1a8a972fc58c0a865cab64d7be77eb6591d1ee79d6b14              354 main/binary-amd64/Packages.gz

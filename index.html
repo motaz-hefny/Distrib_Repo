@@ -1,1 +1,46 @@
-MoTekLab MetaForge APT Repository
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoTekLab MetaForge — APT Repository</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 2rem; line-height: 1.6; }
+    h1 { color: #2563eb; }
+    code { background: #f1f5f9; padding: 0.2em 0.4em; border-radius: 3px; font-size: 0.9em; }
+    pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+    pre code { background: none; padding: 0; color: inherit; font-size: 0.85em; }
+    hr { margin: 2rem 0; border: 0; border-top: 1px solid #e2e8f0; }
+    a { color: #2563eb; }
+    .warning { background: #fef3c7; border: 1px solid #f59e0b; padding: 0.75rem 1rem; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h1>MoTekLab MetaForge</h1>
+  <p>Free, private, Linux-first media metadata tagger.</p>
+
+  <h2>APT Install (Debian / Ubuntu)</h2>
+  <pre><code>curl -fsSL https://motaz-hefny.github.io/Distrib_Repo/ | sed -n 's|.*href="\\([^\"]*\\.deb\\)".*|https://motaz-hefny.github.io/Distrib_Repo/debian/pool/main/\1|p'</code></pre>
+
+  <p>Or add the repository for automatic updates:</p>
+  <pre><code>echo "deb [trusted=yes] https://motaz-hefny.github.io/Distrib_Repo/ debian stable main" | sudo tee /etc/apt/sources.list.d/moteklab-metaforge.list
+sudo apt update
+sudo apt install moteklab-metaforge</code></pre>
+
+  <div class="warning">
+    <strong>Note:</strong> This repository is unsigned (<code>[trusted=yes]</code>). 
+    A signed repository will be available in a future release.
+  </div>
+
+  <h2>Manual Install</h2>
+  <p>Download the latest <code>.deb</code> or <code>.rpm</code> from the 
+    <a href="https://github.com/motaz-hefny/Distrib_Repo/releases">Releases page</a>.</p>
+  <pre><code>sudo dpkg -i MoTekLab.MetaForge_*.deb</code></pre>
+
+  <h2>GitHub</h2>
+  <p><a href="https://github.com/motaz-hefny/Distrib_Repo">github.com/motaz-hefny/Distrib_Repo</a></p>
+
+  <hr>
+  <p style="color: #64748b;">Latest version: 0.3.2</p>
+</body>
+</html>
