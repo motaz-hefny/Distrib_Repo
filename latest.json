@@ -1,5 +1,4 @@
 {
-  "version": "1.7.1",
-  "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "Arabic concurrency slider entry in help docs: — added Q&A for the concurrency slider setting in the Arabic proxy-checker help section. | CHANGELOG and README now include full app description: — top of v1.7.0 section and README subtitle now describe the complete proxy lifecycle (harvesting, validation, management, chains, judge, diagnostics, multilingual help) for new users."
+  "metaforge": "0.3.2",
+  "proxy-suite": "1.7.1"
 }
