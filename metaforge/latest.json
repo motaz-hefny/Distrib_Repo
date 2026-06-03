@@ -1,0 +1,5 @@
+{
+  "version": "0.3.2",
+  "url": "https://github.com/motaz-hefny/MoTekLab-MetaForge/releases/latest",
+  "notes": "Rename override moved to file-nav. Wikipedia eprintln noise suppressed. Word-boundary title matching tightened. TV infobox labels added (Created by, Showrunner, Composers, Editors). Field Explorer episode data priority fix."
+}
