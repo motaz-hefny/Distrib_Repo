@@ -6,7 +6,7 @@ Public release directory for all MoTekLab applications.
 
 **APT (Debian / Ubuntu):**
 ```bash
-echo "deb [trusted=yes] https://motaz-hefny.github.io/Distrib_Repo/ debian stable main" | sudo tee /etc/apt/sources.list.d/moteklab-metaforge.list
+echo "deb [trusted=yes] https://motaz-hefny.github.io/Distrib_Repo/debian stable main" | sudo tee /etc/apt/sources.list.d/moteklab-metaforge.list
 sudo apt update
 sudo apt install moteklab-metaforge
 ```
