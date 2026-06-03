@@ -23,7 +23,7 @@
   <pre><code>curl -fsSL https://motaz-hefny.github.io/Distrib_Repo/ | sed -n 's|.*href="\\([^\"]*\\.deb\\)".*|https://motaz-hefny.github.io/Distrib_Repo/debian/pool/main/\1|p'</code></pre>
 
   <p>Or add the repository for automatic updates:</p>
-  <pre><code>echo "deb [trusted=yes] https://motaz-hefny.github.io/Distrib_Repo/ debian stable main" | sudo tee /etc/apt/sources.list.d/moteklab-metaforge.list
+  <pre><code>echo "deb [trusted=yes] https://motaz-hefny.github.io/Distrib_Repo/debian stable main" | sudo tee /etc/apt/sources.list.d/moteklab-metaforge.list
 sudo apt update
 sudo apt install moteklab-metaforge</code></pre>
 

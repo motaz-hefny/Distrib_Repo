@@ -1,0 +1,15 @@
+Package: mo-tek-lab-meta-forge
+Version: 0.3.2
+Architecture: amd64
+Maintainer: MoTekLab
+Installed-Size: 25271
+Depends: libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: pool/main/metaforge-v0.3.2.deb
+Size: 8468456
+MD5sum: c46c7c2b15951c0ba475ce51047eacb5
+SHA1: 0a039a8f0971006ecfa43d3ce6160503976bccbc
+SHA256: 476bb83fed10871ec37c3fc2f6ba7ece623a04f565c93f7e2de923e0ddf9984b
+Priority: optional
+Description: MoTekLab MetaForge — Media metadata tagger
+ (none)
+
