@@ -1,14 +1,14 @@
 Package: moteklab-metaforge
-Version: 0.3.3
+Version: 0.3.4
 Architecture: amd64
 Maintainer: MoTekLab
-Installed-Size: 20643
+Installed-Size: 20642
 Depends: ffmpeg, mkvtoolnix, libwebkit2gtk-4.1-0, libgtk-3-0
-Filename: pool/main/metaforge-v0.3.3.deb
-Size: 6939366
-MD5sum: 155783107bd6684ee769e6e4a5715224
-SHA1: 459c059c1cfc5526ea884bbb866def0802c6c29f
-SHA256: 3f739001ebc02c114a47d205522621f797886e165af997142ca06ed10d8afa18
+Filename: pool/main/metaforge-v0.3.4.deb
+Size: 6937856
+MD5sum: c814008666f5a23b755fe035e1fa9725
+SHA1: 445c06d02a9aff4ec63146f35ca07d0d4eee4e9c
+SHA256: 85a5149d5226ea67ae90d06ffb73c611314a31c92b7483e4ced7ebe16dd5eeb5
 Priority: optional
 Description: MoTekLab MetaForge — Media metadata tagger
  (none)
