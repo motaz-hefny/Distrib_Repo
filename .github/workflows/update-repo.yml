@@ -54,7 +54,9 @@ jobs:
           if [ -n "$DEB_FILE" ]; then
             mv "$DEB_FILE" "debian/pool/main/metaforge-${RELEASE_TAG}.deb"
             cd debian
-            dpkg-scanpackages pool/main /dev/null | gzip -9c > dists/stable/main/binary-amd64/Packages.gz
+            # Generate both uncompressed Packages and Packages.gz
+            dpkg-scanpackages pool/main /dev/null > dists/stable/main/binary-amd64/Packages
+            gzip -9c dists/stable/main/binary-amd64/Packages > dists/stable/main/binary-amd64/Packages.gz
             cd dists/stable
             apt-ftparchive release . > Release
           else
