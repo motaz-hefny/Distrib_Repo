@@ -1,13 +1,16 @@
 name: Update APT/RPM Repository Indexes
 
 on:
-  release:
-    types: [published]
   workflow_dispatch:
     inputs:
       release_tag:
         description: 'Tag name to process (e.g. v0.9.0)'
         required: true
+        type: string
+      source_repo:
+        description: 'Repository containing the release assets'
+        required: false
+        default: 'motaz-hefny/MetaForge'
         type: string
 
 permissions:
@@ -31,13 +34,13 @@ jobs:
           mkdir -p debian/pool/main
           mkdir -p debian/dists/stable/main/binary-amd64
 
-          RELEASE_TAG="${{ github.event.release.tag_name || inputs.release_tag }}"
-          REPO="${{ github.repository }}"
+          RELEASE_TAG="${{ inputs.release_tag }}"
+          SOURCE_REPO="${{ inputs.source_repo }}"
 
           # Remove old debs so dpkg-scanpackages picks only the latest
           rm -f debian/pool/main/*.deb
 
-          gh release download "$RELEASE_TAG" --repo "$REPO" --pattern "*.deb" --dir debian/pool/main || true
+          gh release download "$RELEASE_TAG" --repo "$SOURCE_REPO" --pattern "*.deb" --dir debian/pool/main || true
           DEB_FILE=$(ls debian/pool/main/*.deb 2>/dev/null | head -1)
 
           if [ -n "$DEB_FILE" ]; then
@@ -56,7 +59,7 @@ jobs:
             } > Release
             apt-ftparchive release . >> Release
           else
-            echo "No .deb found for release $RELEASE_TAG — skipping APT index update"
+            echo "No .deb found in $SOURCE_REPO for release $RELEASE_TAG — skipping APT index update"
           fi
 
       - name: Commit & Push gh-pages updates
@@ -67,6 +70,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update APT repository index for release ${{ github.event.release.tag_name || inputs.release_tag }}"
+            git commit -m "Update APT repository index for release ${{ inputs.release_tag }}"
             git push origin gh-pages
           fi
