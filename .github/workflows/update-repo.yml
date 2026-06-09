@@ -40,7 +40,13 @@ jobs:
           # Remove old debs so dpkg-scanpackages picks only the latest
           rm -f debian/pool/main/*.deb
 
-          gh release download "$RELEASE_TAG" --repo "$SOURCE_REPO" --pattern "*.deb" --dir debian/pool/main || true
+          # Fetch .deb from public release assets (no auth needed for public repos)
+          DEB_URL=$(curl -s "https://api.github.com/repos/$SOURCE_REPO/releases/tags/$RELEASE_TAG" \
+            | python3 -c "import sys,json;d=json.load(sys.stdin);[print(a['browser_download_url'])for a in d.get('assets',[])if a['name'].endswith('.deb')]" \
+            | head -1)
+
+          if [ -n "$DEB_URL" ]; then
+            wget -q "$DEB_URL" -P debian/pool/main
           DEB_FILE=$(ls debian/pool/main/*.deb 2>/dev/null | head -1)
 
           if [ -n "$DEB_FILE" ]; then
