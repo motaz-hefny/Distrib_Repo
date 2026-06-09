@@ -5,20 +5,20 @@ Codename: stable
 Architectures: amd64
 Components: main
 Description: MoTekLab MetaForge APT repository
-Date: Tue, 09 Jun 2026 06:38:11 +0000
+Date: Tue, 09 Jun 2026 06:49:36 +0000
 MD5Sum:
- 6190727d50959796a5a3417a376969dc              195 Release
+ 9c6d6c692b1208c85e5291c811a9919e              195 Release
  84640c9032766e1ccc00123d0333a1b4              469 main/binary-amd64/Packages
- 7eb057566ffa9569a07729237a0651d6              367 main/binary-amd64/Packages.gz
+ de8a03f14e2bcb24094c428c77a8cbd5              365 main/binary-amd64/Packages.gz
 SHA1:
- 2c4a0a515fd35019a11277fe34feb5ea2fdeacc1              195 Release
+ 780281da424463cd59a3e3e237fb88a95d6f2638              195 Release
  ac5686737cb816651ee058e1c0e3b6928d90f563              469 main/binary-amd64/Packages
- 9bd5bac757a93a8879fc9ac2b3c11b62031a5128              367 main/binary-amd64/Packages.gz
+ 335b748684b7c3aa271d0771ace5e421281ea1bf              365 main/binary-amd64/Packages.gz
 SHA256:
- cf8f384816a13231053c6516e5cd612a54b9d787373a7a84d1e54b7c88bd57f3              195 Release
+ 7f622ecf423bc8b29c4731591f691d8d1dff785f77dde83a05842a4d8c76e28e              195 Release
  3256f663e5dc262bd6841249c836dc8151b0509cd9dc7b45c8ef7c579634046b              469 main/binary-amd64/Packages
- c2d5257926c1b9df1c2e19aecee3d5da759e6bb64ff14755b08bbf04f6a93aa6              367 main/binary-amd64/Packages.gz
+ df1e6a75a8cf1a9a642d993825dd530b93843471b2530d68d542b3cccf3a0b97              365 main/binary-amd64/Packages.gz
 SHA512:
- 991bcd4689669d3fe1c7c2aafab31a33f35103ce1c31a7d6e49074497947a099d9b599521340e673562766bc0e0615e4d23c6d7125d63b4a5a91e0bda02ddb39              195 Release
+ 7f323fe5216c2c378f8c5c0c8f2983950d1413d67186a459e11a4f7c7b3419f5b4d119c5b1b9556b6d81336279171dd333c403c459b00cc18b4d60a472a8987e              195 Release
  2f01f001b2a7051cd3c5901fd224131b75c303b277353dc8f27aced1b0c97a22624703ff71cc5588ba0d7128a48bccef6b3703101aedaef81a2de3487dea32e2              469 main/binary-amd64/Packages
- 9991816ae329540ca8ab5f4c55316e31d7f94ee77a426ff31df381e3b6fc360779a584866929f2ccf89bc2aba74a740b8cfe86e36bd085df1f197598f81e2ef4              367 main/binary-amd64/Packages.gz
+ 7d9bc8ea6bea83be32a301587201138e067aa2f729e7426d4e0bd90dc67eb7f91a6bc75cf27d1f9a2b1bbb7b6c20547efcf0616bc432ab7170934d479c2be999              365 main/binary-amd64/Packages.gz
