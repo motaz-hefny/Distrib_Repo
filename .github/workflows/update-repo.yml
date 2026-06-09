@@ -34,6 +34,9 @@ jobs:
           RELEASE_TAG="${{ github.event.release.tag_name || inputs.release_tag }}"
           REPO="${{ github.repository }}"
 
+          # Remove old debs so dpkg-scanpackages picks only the latest
+          rm -f debian/pool/main/*.deb
+
           gh release download "$RELEASE_TAG" --repo "$REPO" --pattern "*.deb" --dir debian/pool/main || true
           DEB_FILE=$(ls debian/pool/main/*.deb 2>/dev/null | head -1)
 
