@@ -5,20 +5,20 @@ Codename: stable
 Architectures: amd64
 Components: main
 Description: MoTekLab MetaForge APT repository
-Date: Thu, 04 Jun 2026 20:49:51 +0000
+Date: Tue, 09 Jun 2026 06:38:11 +0000
 MD5Sum:
- dc54364d52b26d1c2e2b54c45bf5d47a              195 Release
+ 6190727d50959796a5a3417a376969dc              195 Release
  84640c9032766e1ccc00123d0333a1b4              469 main/binary-amd64/Packages
  7eb057566ffa9569a07729237a0651d6              367 main/binary-amd64/Packages.gz
 SHA1:
- 8969b682ec223cd5548fe3affc77c98136e834fb              195 Release
+ 2c4a0a515fd35019a11277fe34feb5ea2fdeacc1              195 Release
  ac5686737cb816651ee058e1c0e3b6928d90f563              469 main/binary-amd64/Packages
  9bd5bac757a93a8879fc9ac2b3c11b62031a5128              367 main/binary-amd64/Packages.gz
 SHA256:
- 363ca8196b3895e54c10195b5560a9a9ffb4a7b31d1770589fbbf8cddd1c78a5              195 Release
+ cf8f384816a13231053c6516e5cd612a54b9d787373a7a84d1e54b7c88bd57f3              195 Release
  3256f663e5dc262bd6841249c836dc8151b0509cd9dc7b45c8ef7c579634046b              469 main/binary-amd64/Packages
  c2d5257926c1b9df1c2e19aecee3d5da759e6bb64ff14755b08bbf04f6a93aa6              367 main/binary-amd64/Packages.gz
 SHA512:
- 718917730e916ba109b146b53f8b565c2a4fc25b282c5efff2c7f66de298be7cf0d7ba1883868ef7acb222fca755a3fbcd493d1f560ec8a96242e247f6deba6c              195 Release
+ 991bcd4689669d3fe1c7c2aafab31a33f35103ce1c31a7d6e49074497947a099d9b599521340e673562766bc0e0615e4d23c6d7125d63b4a5a91e0bda02ddb39              195 Release
  2f01f001b2a7051cd3c5901fd224131b75c303b277353dc8f27aced1b0c97a22624703ff71cc5588ba0d7128a48bccef6b3703101aedaef81a2de3487dea32e2              469 main/binary-amd64/Packages
  9991816ae329540ca8ab5f4c55316e31d7f94ee77a426ff31df381e3b6fc360779a584866929f2ccf89bc2aba74a740b8cfe86e36bd085df1f197598f81e2ef4              367 main/binary-amd64/Packages.gz
