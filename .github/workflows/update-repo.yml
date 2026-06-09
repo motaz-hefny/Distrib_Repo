@@ -28,7 +28,7 @@ jobs:
           RELEASE_TAG=\"\${{ github.event.release.tag_name }}\"
           REPO=\"\${{ github.repository }}\"
 
-          DEB_URL=\$(curl -s \"https://api.github.com/repos/\$REPO/releases/tags/\$RELEASE_TAG\" \\
+          DEB_URL=\$(curl -s -H \"Authorization: Bearer \${{ secrets.GITHUB_TOKEN }}\" \"https://api.github.com/repos/\$REPO/releases/tags/\$RELEASE_TAG\" \\
             | python3 -c \"import sys,json; data=json.load(sys.stdin); \
               [print(a["\"browser_download_url\""]) for a in data.get("\"assets\"",[]) if a["\"name\""].endswith("\".deb\"")]\" \\
             | head -1)
