@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
 Architectures: amd64
 Codename: stable
 Components: main
@@ -22,3 +25,14 @@ SHA512:
  b330bce482020a5011e4da5222f1dccbe640ef2d90ff928cbc32cc419bf2ca037520e46bd921e07880e849cbb43851d95934609473b2d68e554afad59af30384              195 Release
  2f01f001b2a7051cd3c5901fd224131b75c303b277353dc8f27aced1b0c97a22624703ff71cc5588ba0d7128a48bccef6b3703101aedaef81a2de3487dea32e2              469 main/binary-amd64/Packages
  7d9bc8ea6bea83be32a301587201138e067aa2f729e7426d4e0bd90dc67eb7f91a6bc75cf27d1f9a2b1bbb7b6c20547efcf0616bc432ab7170934d479c2be999              365 main/binary-amd64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCgAdFiEE5GZaAC6zVlJoiYDBSk9qO9GSjkoFAmonuREACgkQSk9qO9GS
+jkqMgwf/cjtCb47H8ArkXQiSAqnd96f2f6MbHprzQ2sNCneMSbsptrZNvMikkFR5
+loT+uODXEQYcDeSj19zHHL1s+bbYl0tiyJNNrr2ucQrSOrer4CVixz4UkMTXx6p5
+j8U6JkuacT1mOdOVYOHfMYO2ps4FSZz8RVwpIB/QgQFsny9/Xrg09Yke8BMgisAp
+O6M+qSNVZQ6iyrrUFLh6J/DNYB6i074yu9gGccrWbSHiZ7fj18kkp3ca2ABC47sJ
+BoGqRcUqbn9AS8b/vj9Fz2WIaDhTmMGCiaClT4cjLjTRWvoVIywNIl+uFbPZCWTg
+xTxjbgSjYnFtaG7TZsLlnfeWnZiX2g==
+=v5lL
+-----END PGP SIGNATURE-----

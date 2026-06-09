@@ -20,27 +20,28 @@
   <p>Free, private, Linux-first media metadata tagger.</p>
 
   <h2>APT Install (Debian / Ubuntu)</h2>
-  <pre><code>curl -fsSL https://motaz-hefny.github.io/Distrib_Repo/ | sed -n 's|.*href="\\([^\"]*\\.deb\\)".*|https://motaz-hefny.github.io/Distrib_Repo/debian/pool/main/\1|p'</code></pre>
 
-  <p>Or add the repository for automatic updates:</p>
+  <p>Add the repository for automatic updates:</p>
+  <pre><code>sudo mkdir -p /usr/share/keyrings
+curl -fsSL https://motaz-hefny.github.io/Distrib_Repo/debian/KEY.gpg | sudo tee /usr/share/keyrings/moteklab.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/moteklab.gpg] https://motaz-hefny.github.io/Distrib_Repo/debian stable main" | sudo tee /etc/apt/sources.list.d/moteklab-metaforge.list
+sudo apt update
+sudo apt install moteklab-metaforge</code></pre>
+
+  <p>Or, if you prefer not to set up GPG verification:</p>
   <pre><code>echo "deb [trusted=yes] https://motaz-hefny.github.io/Distrib_Repo/debian stable main" | sudo tee /etc/apt/sources.list.d/moteklab-metaforge.list
 sudo apt update
 sudo apt install moteklab-metaforge</code></pre>
 
-  <div class="warning">
-    <strong>Note:</strong> This repository is unsigned (<code>[trusted=yes]</code>). 
-    A signed repository will be available in a future release.
-  </div>
-
   <h2>Manual Install</h2>
   <p>Download the latest <code>.deb</code> or <code>.rpm</code> from the 
     <a href="https://github.com/motaz-hefny/Distrib_Repo/releases">Releases page</a>.</p>
-  <pre><code>sudo dpkg -i MoTekLab.MetaForge_*.deb</code></pre>
+  <pre><code>sudo dpkg -i moteklab-metaforge_*.deb</code></pre>
 
   <h2>GitHub</h2>
-  <p><a href="https://github.com/motaz-hefny/Distrib_Repo">github.com/motaz-hefny/Distrib_Repo</a></p>
+  <p><a href="https://github.com/motaz-hefny/MetaForge">github.com/motaz-hefny/MetaForge</a></p>
 
   <hr>
-  <p style="color: #64748b;">Latest version: 0.3.2</p>
+  <p style="color: #64748b;">Latest version: 0.9.0</p>
 </body>
 </html>
