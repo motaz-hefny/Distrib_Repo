@@ -47,6 +47,7 @@ jobs:
 
           if [ -n "$DEB_URL" ]; then
             wget -q "$DEB_URL" -P debian/pool/main
+          fi
           DEB_FILE=$(ls debian/pool/main/*.deb 2>/dev/null | head -1)
 
           if [ -n "$DEB_FILE" ]; then
