@@ -27,7 +27,8 @@ jobs:
       - name: Import GPG Signing Key
         run: |
           echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
-          gpg --list-secret-keys --keyid-format LONG
+          gpg --export 4A4F6A3BD1928E4A > debian/KEY.gpg
+          echo "GPG key imported and exported as binary"
 
       - name: Fetch Latest Assets & Generate APT Directory Structure
         run: |
