@@ -1,6 +1,8 @@
 name: Update APT/RPM Repository Indexes
 
 on:
+  release:
+    types: [published]
   workflow_dispatch:
     inputs:
       release_tag:
@@ -35,7 +37,8 @@ jobs:
           mkdir -p debian/pool/main
           mkdir -p debian/dists/stable/main/binary-amd64
 
-          RELEASE_TAG="${{ inputs.release_tag }}"
+          # Support both release event and manual workflow_dispatch
+          RELEASE_TAG="${{ github.event.release.tag_name || inputs.release_tag }}"
           REPO="${{ github.repository }}"
 
           # Remove old debs so dpkg-scanpackages picks only the latest
