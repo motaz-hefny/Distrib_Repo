@@ -7,11 +7,6 @@ on:
         description: 'Tag name to process (e.g. v0.9.0)'
         required: true
         type: string
-      source_repo:
-        description: 'Repository containing the release assets'
-        required: false
-        default: 'motaz-hefny/MetaForge'
-        type: string
 
 permissions:
   contents: write
@@ -35,19 +30,11 @@ jobs:
           mkdir -p debian/dists/stable/main/binary-amd64
 
           RELEASE_TAG="${{ inputs.release_tag }}"
-          SOURCE_REPO="${{ inputs.source_repo }}"
 
           # Remove old debs so dpkg-scanpackages picks only the latest
           rm -f debian/pool/main/*.deb
 
-          # Fetch .deb from public release assets (no auth needed for public repos)
-          DEB_URL=$(curl -s "https://api.github.com/repos/$SOURCE_REPO/releases/tags/$RELEASE_TAG" \
-            | python3 -c "import sys,json;d=json.load(sys.stdin);[print(a['browser_download_url'])for a in d.get('assets',[])if a['name'].endswith('.deb')]" \
-            | head -1)
-
-          if [ -n "$DEB_URL" ]; then
-            wget -q "$DEB_URL" -P debian/pool/main
-          fi
+          gh release download "$RELEASE_TAG" --pattern "*.deb" --dir debian/pool/main
           DEB_FILE=$(ls debian/pool/main/*.deb 2>/dev/null | head -1)
 
           if [ -n "$DEB_FILE" ]; then
@@ -66,7 +53,7 @@ jobs:
             } > Release
             apt-ftparchive release . >> Release
           else
-            echo "No .deb found in $SOURCE_REPO for release $RELEASE_TAG — skipping APT index update"
+            echo "No .deb found for release $RELEASE_TAG — skipping APT index update"
           fi
 
       - name: Commit & Push gh-pages updates
