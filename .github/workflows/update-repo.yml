@@ -3,6 +3,12 @@ name: Update APT/RPM Repository Indexes
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Tag name to process (e.g. v0.9.0)'
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -25,41 +31,39 @@ jobs:
           mkdir -p debian/pool/main
           mkdir -p debian/dists/stable/main/binary-amd64
 
-          RELEASE_TAG=\"\${{ github.event.release.tag_name }}\"
-          REPO=\"\${{ github.repository }}\"
+          RELEASE_TAG="${{ github.event.release.tag_name || inputs.release_tag }}"
+          REPO="${{ github.repository }}"
 
-          DEB_URL=\$(curl -s -H \"Authorization: Bearer \${{ secrets.GITHUB_TOKEN }}\" \"https://api.github.com/repos/\$REPO/releases/tags/\$RELEASE_TAG\" \\
-            | python3 -c \"import sys,json; data=json.load(sys.stdin); \
-              [print(a["\"browser_download_url\""]) for a in data.get("\"assets\"",[]) if a["\"name\""].endswith("\".deb\"")]\" \\
-            | head -1)
+          gh release download "$RELEASE_TAG" --repo "$REPO" --pattern "*.deb" --dir debian/pool/main || true
+          DEB_FILE=$(ls debian/pool/main/*.deb 2>/dev/null | head -1)
 
-          if [ -n \"\$DEB_URL\" ]; then
-            wget -q \"\$DEB_URL\" -O debian/pool/main/metaforge-\$RELEASE_TAG.deb
+          if [ -n "$DEB_FILE" ]; then
+            mv "$DEB_FILE" "debian/pool/main/metaforge-${RELEASE_TAG}.deb"
             cd debian
             dpkg-scanpackages pool/main /dev/null | gzip -9c > dists/stable/main/binary-amd64/Packages.gz
             cd dists/stable
             {
-              echo \"Origin: MoTekLab\"
-              echo \"Label: MetaForge Stable\"
-              echo \"Suite: stable\"
-              echo \"Codename: stable\"
-              echo \"Architectures: amd64\"
-              echo \"Components: main\"
-              echo \"Description: MoTekLab MetaForge APT repository\"
+              echo "Origin: MoTekLab"
+              echo "Label: MetaForge Stable"
+              echo "Suite: stable"
+              echo "Codename: stable"
+              echo "Architectures: amd64"
+              echo "Components: main"
+              echo "Description: MoTekLab MetaForge APT repository"
             } > Release
             apt-ftparchive release . >> Release
           else
-            echo \"No .deb found for release \$RELEASE_TAG — skipping APT index update\"
+            echo "No .deb found for release $RELEASE_TAG — skipping APT index update"
           fi
 
       - name: Commit & Push gh-pages updates
         run: |
-          git config --global user.name \"github-actions[bot]\"
-          git config --global user.email \"github-actions[bot]@users.noreply.github.com\"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --staged --quiet; then
-            echo \"No changes to commit\"
+            echo "No changes to commit"
           else
-            git commit -m \"Update APT repository index for release \${{ github.event.release.tag_name }}\"
+            git commit -m "Update APT repository index for release ${{ github.event.release.tag_name || inputs.release_tag }}"
             git push origin gh-pages
           fi
