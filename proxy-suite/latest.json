@@ -1,6 +1,6 @@
 {
-    "version": "1.4.0",
-    "url": "https://github.com/motaz-hefny/MoTekLab_Proxy_Suite/releases/tag/v1.4.0",
-    "releaseDate": "2026-05-08",
-    "notes": "v1.4.0: Proxy Judge Discovery System, security hardening, performance improvements, route animations, Help system, Tooltip overhaul"
+  "version": "1.7.1",
+  "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/tag/v1.7.1",
+  "releaseDate": "2026-05-20",
+  "notes": "MoTekLab Proxy Suite v1.7.1: High-throughput async verification pipeline, automated proxy judge discovery, anonymity categorization, and interactive GUI dashboard."
 }

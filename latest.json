@@ -1,4 +1,7 @@
 {
-  "metaforge": "0.3.2",
-  "proxy-suite": "1.7.1"
+  "metaforge": "0.10.0",
+  "proxy-suite": "1.7.1",
+  "vconv": "1.0.0",
+  "vcex-converter": "1.2.0",
+  "markdown-converter": "1.1.0"
 }

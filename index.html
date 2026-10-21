@@ -3,44 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MoTekLab MetaForge — APT Repository</title>
+  <title>MoTekLab Universal Distribution Hub</title>
+  <meta name="description" content="Official public release repository for MoTekLab software, packages, installers, and repositories.">
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 2rem; line-height: 1.6; }
-    h1 { color: #2563eb; }
-    code { background: #f1f5f9; padding: 0.2em 0.4em; border-radius: 3px; font-size: 0.9em; }
-    pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 6px; overflow-x: auto; }
-    pre code { background: none; padding: 0; color: inherit; font-size: 0.85em; }
-    hr { margin: 2rem 0; border: 0; border-top: 1px solid #e2e8f0; }
-    a { color: #2563eb; }
-    .warning { background: #fef3c7; border: 1px solid #f59e0b; padding: 0.75rem 1rem; border-radius: 6px; }
+    :root {
+      --bg-primary: #0f172a;
+      --bg-card: #1e293b;
+      --bg-card-hover: #334155;
+      --border-color: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-rose: #f43f5e;
+      --accent-rose-hover: #fb7185;
+      --accent-amber: #f59e0b;
+      --code-bg: #090d16;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1.5rem;
+    }
+    .brand {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent-rose);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-rose);
+    }
+    .card-badge {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(244, 63, 94, 0.15);
+      color: var(--accent-rose);
+      margin-bottom: 0.75rem;
+    }
+    .card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+    .card-footer {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-rose-hover);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .terminal-box {
+      background: var(--code-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 2rem;
+      overflow-x: auto;
+    }
+    pre {
+      color: #cbd5e1;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .code-comment {
+      color: #64748b;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--accent-rose);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.15s ease;
+    }
+    .btn:hover {
+      background: var(--accent-rose-hover);
+    }
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.5rem;
+      margin-top: 3rem;
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--text-muted); text-decoration: none; }
+    footer a:hover { color: var(--text-main); }
   </style>
 </head>
 <body>
-  <h1>MoTekLab MetaForge</h1>
-  <p>Free, private, Linux-first media metadata tagger.</p>
+  <div class="container">
+    <header>
+      <div class="brand">MoTekLab Engineering</div>
+      <h1>Universal Distribution Hub</h1>
+      <p>Central public repository for MoTekLab applications, platform packages, and system release channels.</p>
+    </header>
 
-  <h2>APT Install (Debian / Ubuntu)</h2>
-  <pre><code>curl -fsSL https://motaz-hefny.github.io/Distrib_Repo/ | sed -n 's|.*href="\\([^\"]*\\.deb\\)".*|https://motaz-hefny.github.io/Distrib_Repo/debian/pool/main/\1|p'</code></pre>
+    <h2 class="section-title">Software Catalog</h2>
+    <div class="grid">
+      <!-- MetaForge -->
+      <a href="metaforge/README.md" class="card">
+        <div>
+          <span class="card-badge">v0.10.0 • Latest</span>
+          <h2>MoTekLab MetaForge</h2>
+          <p>Privacy-first, Linux-first media metadata tagger & organizer. Fast in-place MP4 atomic tagging, Arabic RTL support, and Kodi/Jellyfin NFO export.</p>
+        </div>
+        <div class="card-footer">View Release & Downloads →</div>
+      </a>
 
-  <p>Or add the repository for automatic updates:</p>
-  <pre><code>echo "deb [trusted=yes] https://motaz-hefny.github.io/Distrib_Repo/debian stable main" | sudo tee /etc/apt/sources.list.d/moteklab-metaforge.list
+      <!-- Proxy Suite -->
+      <a href="proxy-suite/README.md" class="card">
+        <div>
+          <span class="card-badge">v1.7.1</span>
+          <h2>MoTekLab Proxy Suite</h2>
+          <p>High-throughput automated proxy harvesting, latency benchmarking, judge validation, and real-time dashboard.</p>
+        </div>
+        <div class="card-footer">View Release & Downloads →</div>
+      </a>
+
+      <!-- vconv -->
+      <a href="vconv/README.md" class="card">
+        <div>
+          <span class="card-badge">v1.0.0</span>
+          <h2>MoTekLab Video Converter</h2>
+          <p>Hardware-accelerated AV1, HEVC, and H.264 video conversion utility with lossless remuxing and chapter preservation.</p>
+        </div>
+        <div class="card-footer">View Details →</div>
+      </a>
+
+      <!-- VCEX Converter -->
+      <a href="vcex-converter/README.md" class="card">
+        <div>
+          <span class="card-badge">v1.2.0</span>
+          <h2>MoTekLab VCEX Converter</h2>
+          <p>Lossless exam format converter, blueprint validator, and test review studio for technical certifications.</p>
+        </div>
+        <div class="card-footer">View Details →</div>
+      </a>
+
+      <!-- Markdown Converter -->
+      <a href="markdown-converter/README.md" class="card">
+        <div>
+          <span class="card-badge">v1.1.0</span>
+          <h2>Markdown to RichText</h2>
+          <p>Zero-telemetry Markdown converter for Microsoft Word, Google Docs, styled PDFs, and formatted clipboard export.</p>
+        </div>
+        <div class="card-footer">View Details →</div>
+      </a>
+    </div>
+
+    <h2 class="section-title">MetaForge APT Repository Setup</h2>
+    <p style="color: var(--text-muted); margin-bottom: 0.75rem;">Debian, Ubuntu, Pop!_OS, and Linux Mint systems can subscribe to the automated APT repository channel:</p>
+    <div class="terminal-box">
+      <pre><code><span class="code-comment"># 1. Register the repository source</span>
+echo "deb [trusted=yes] https://motaz-hefny.github.io/Distrib_Repo/debian stable main" | sudo tee /etc/apt/sources.list.d/moteklab-metaforge.list
+
+<span class="code-comment"># 2. Update package cache & install</span>
 sudo apt update
 sudo apt install moteklab-metaforge</code></pre>
+    </div>
 
-  <div class="warning">
-    <strong>Note:</strong> This repository is unsigned (<code>[trusted=yes]</code>). 
-    A signed repository will be available in a future release.
+    <div style="margin-top: 1rem; margin-bottom: 2rem;">
+      <a href="https://github.com/motaz-hefny/Distrib_Repo/releases" class="btn">
+        Browse All GitHub Releases & Assets →
+      </a>
+    </div>
+
+    <footer>
+      <div>© 2026 MoTekLab. Built for privacy, performance, and freedom.</div>
+      <div>
+        <a href="https://moteklab.com">moteklab.com</a>
+      </div>
+    </footer>
   </div>
-
-  <h2>Manual Install</h2>
-  <p>Download the latest <code>.deb</code> or <code>.rpm</code> from the 
-    <a href="https://github.com/motaz-hefny/Distrib_Repo/releases">Releases page</a>.</p>
-  <pre><code>sudo dpkg -i MoTekLab.MetaForge_*.deb</code></pre>
-
-  <h2>GitHub</h2>
-  <p><a href="https://github.com/motaz-hefny/Distrib_Repo">github.com/motaz-hefny/Distrib_Repo</a></p>
-
-  <hr>
-  <p style="color: #64748b;">Latest version: 0.3.2</p>
 </body>
 </html>
