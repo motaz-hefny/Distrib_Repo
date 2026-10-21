@@ -49,8 +49,7 @@ All binaries are available on the [MoTekLab Releases Page](https://github.com/mo
 | **`.deb`** | Ubuntu / Debian / Mint (amd64) | `sudo dpkg -i moteklab_metaforge_0.10.0_amd64.deb` |
 | **`.rpm`** | Fedora / RHEL / openSUSE | `sudo rpm -i moteklab_metaforge-0.10.0-1.x86_64.rpm` |
 | **`.AppImage`** | Universal Linux | `chmod +x moteklab_metaforge_0.10.0_amd64.AppImage && ./moteklab_metaforge_0.10.0_amd64.AppImage` |
-| **`.apk`** | Android Companion / Alpine | Available in distribution channel releases |
-| **`.exe` / `.msi`** | Windows (x64) | Standalone Windows installer and portable archive |
+| **`.exe` / `.msi`** | Windows (x64) | *(Coming Soon)* Standalone Windows installer and portable archive |
 
 ---
 
@@ -71,4 +70,4 @@ MetaForge provides keyless out-of-the-box querying without requiring any user re
 
 - [Distribution Hub Main Index](../README.md)
 - [Download Latest Binaries](https://github.com/motaz-hefny/Distrib_Repo/releases/tag/v0.10.0)
-- [Report Issues & Discussion](https://moteklab.com)
+- [Official Website](https://moteklab.com)

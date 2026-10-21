@@ -35,7 +35,7 @@ sudo apt install moteklab-metaforge
 
 Binaries are attached directly to each release on GitHub:
 - **[Browse All Releases & Assets](https://github.com/motaz-hefny/Distrib_Repo/releases)**
-- Supported formats: `.deb` (Debian/Ubuntu), `.rpm` (Fedora/RHEL), `.AppImage` (Universal Linux), `.apk` (Mobile/Companion), `.exe` / `.msi` (Windows).
+- Supported formats: `.deb` (Debian/Ubuntu), `.rpm` (Fedora/RHEL), `.AppImage` (Universal Linux). *(Windows installer support coming soon)*.
 
 ---
 
