@@ -1,5 +1,5 @@
 {
-  "version": "2.6.1",
+  "version": "2.6.2",
   "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "CI Dependency Alignment:: Synchronized `package-lock.json` with hardened dependency overrides (`postcss-selector-parser@7.1.7`), ensuring automated GitHub Actions release builds succeed cleanly under `npm ci`."
+  "notes": "Settings Scale Slider:: Resolved float truncation in `Settings.tsx` where `parseInt` prevented decimal scale adjustments (0.75x–1.50x), locking the UI zoom factor to 1. | Proxy Checker False-Quarantine:: Added `recordJudgeSuccess` to reset consecutive failure counters upon healthy responses, broadened `isProxyDeadError` to classify proxy connection timeouts and SOCKS 400 Bad Requests as proxy deaths rather than judge outages, and added live direct probes before quarantining so healthy judges are never disabled. | Judge Discovery False Positives:: Hardened `isJudgeShapedBody` to reject blog, documentation, and forum pages (e.g. `proxynova.com/proxy-articles`), preventing informational articles from being falsely registered as live proxy judges."
 }
