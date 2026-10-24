@@ -13,3 +13,28 @@ Priority: optional
 Description: MoTekLab MetaForge — Media metadata tagger
  (none)
 
+Package: moteklab-proxy-suite
+Version: 2.6.1
+Architecture: amd64
+Maintainer: MoTekLab
+Installed-Size: 287636
+Depends: libnotify4, libxtst6, libnss3, libsecret-1-0, libasound2, libgbm1
+Recommends: libappindicator3-1
+Filename: pool/main/MoTekLab-Proxy-Suite_2.6.1_amd64.deb
+Size: 102026972
+MD5sum: aa4e58bab3a6f420177e4054c2b2e861
+SHA1: 731e6cbbfe061e7c6a212b3d3dbbd21808517fe8
+SHA256: b7b947bc07991a4be666c5c05bf95b7a19d1973bcd1296131756205c0a7f281f
+Section: default
+Priority: optional
+Homepage: https://moteklab.com
+Description: Professional High-Performance Proxy Management Suite
+  MoTekLab Proxy Suite is an advanced tool for proxy harvesting, checking, and optimization.
+ Features include:
+ - Stealth scraping with zero-flash browser technology.
+ - High-concurrency proxy checking with detailed diagnostics.
+ - Automated harvesting from search engines and web sources.
+ - Advanced UI with real-time logging and export capabilities.
+License: Custom (See LICENSE file)
+Vendor: MoTekLab
+
