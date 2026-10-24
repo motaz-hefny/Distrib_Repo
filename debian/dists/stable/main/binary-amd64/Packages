@@ -14,17 +14,17 @@ Description: MoTekLab MetaForge — Media metadata tagger
  (none)
 
 Package: moteklab-proxy-suite
-Version: 2.6.2
+Version: 2.6.3
 Architecture: amd64
 Maintainer: MoTekLab
-Installed-Size: 287644
+Installed-Size: 287645
 Depends: libnotify4, libxtst6, libnss3, libsecret-1-0, libasound2, libgbm1
 Recommends: libappindicator3-1
-Filename: pool/main/MoTekLab-Proxy-Suite_2.6.2_amd64.deb
-Size: 102028036
-MD5sum: 7f904ca0689d198d49a25b0f4556afbf
-SHA1: de62eb12cdc52288339d81ae95e5718bc8568efd
-SHA256: efd7000836c5e1e2f8ab11584f1c0277e9883c1b2ce1bd3020b45af37fba1b4e
+Filename: pool/main/MoTekLab-Proxy-Suite_2.6.3_amd64.deb
+Size: 102028448
+MD5sum: f0b6cba1c7f232e536285acd7c23d857
+SHA1: ebd3336371bf008486629e14b7a7e3b65e3d1a08
+SHA256: 6185e2b1c36e9a1abf91ea99daa2184fd69578eeb077ab42df49e40a2c4ca12d
 Section: default
 Priority: optional
 Homepage: https://moteklab.com
