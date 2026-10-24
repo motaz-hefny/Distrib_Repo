@@ -1,5 +1,5 @@
 {
-  "version": "2.5.0",
+  "version": "2.6.1",
   "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/latest",
-  "notes": "1-Click System Proxy toggle:: Real-time OS-level proxy redirection with cross-platform support (Linux GNOME `gsettings`, Windows registry `ProxyEnable`, macOS `networksetup`). Added status toggle in the application StatusBar. | Local working proxy feed endpoint:: HTTP GET `/proxies.txt` on the local proxy server (port 8898) returns a live newline-delimited list of verified working proxies (`host:port`). | Proxy Manager toolbar upgrade:: Real-time keyword search across host, port, country, and source; Anonymity level filter dropdown (`elite`, `anonymous`, `transparent`); bulk \"Check Selected\" and clipboard \"Copy Selected\" actions."
+  "notes": "CI Dependency Alignment:: Synchronized `package-lock.json` with hardened dependency overrides (`postcss-selector-parser@7.1.7`), ensuring automated GitHub Actions release builds succeed cleanly under `npm ci`."
 }
