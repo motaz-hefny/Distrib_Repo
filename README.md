@@ -4,21 +4,24 @@ Welcome to the public distribution repository for **MoTekLab** software projects
 
 This repository serves as a centralized, organized release hub for all MoTekLab tools. Each project features its own dedicated subdirectory containing documentation, release notes, version manifests (`latest.json`), and direct binary download links.
 
+Explore the full ecosystem at **[www.moteklab.com/products](https://www.moteklab.com/products)** and read engineering deep dives on the **[MoTekLab Journal](https://www.moteklab.com/blog)**.
+
 ---
 
-## 📦 Software Catalog & Projects
+## Software Catalog & Official Guides
 
-| Project | Subfolder / Specs | Latest Release | Category | Direct Download / Info |
+| Project | Subfolder / Specs | Latest Release | Category | Live App / Official Guide |
 |---|---|---|---|---|
-| **MoTekLab MetaForge** | [`metaforge/`](metaforge/README.md) | `v0.10.2` | Media Tagging & Organization | [Release Notes & Downloads](metaforge/README.md) |
-| **MoTekLab Proxy Suite** | [`proxy-suite/`](proxy-suite/README.md) | `v1.7.1` | Network Engineering & Scraping | [Release Notes & Downloads](proxy-suite/README.md) |
-| **MoTekLab Video Converter (`vconv`)** | [`vconv/`](vconv/README.md) | `v1.0.0` | Video Encoding & Remuxing | [Release Notes & Downloads](vconv/README.md) |
+| **MoTekLab MetaForge** | [`metaforge/`](metaforge/README.md) | `v0.10.2` | Media Tagging & Organization | [Product Page](https://www.moteklab.com/metaforge) · [Complete Guide](https://www.moteklab.com/blog/moteklab-metaforge-complete-guide) |
+| **MoTekLab Proxy Suite** | [`proxy-suite/`](proxy-suite/README.md) | `v1.7.1` | Network Diagnostics & QA | [Release Guide](https://www.moteklab.com/blog/moteklab-proxy-suite-release) · [Downloads](https://www.moteklab.com/download/proxy-suite) |
+| **MoTekLab Video Converter (`vconv`)** | [`vconv/`](vconv/README.md) | `v1.0.0` | Video Encoding & Remuxing | [v10 Architecture Guide](https://www.moteklab.com/blog/vconv-10-launch) · [Products](https://www.moteklab.com/products) |
 | **MoTekLab VCEX Converter** | [`vcex-converter/`](vcex-converter/README.md) | `v1.2.0` | Certification & Exam Tooling | [Release Notes & Downloads](vcex-converter/README.md) |
-| **MoTekLab Markdown Converter** | [`markdown-converter/`](markdown-converter/README.md) | `v1.1.0` | Document Formatting & Export | [Release Notes & Downloads](markdown-converter/README.md) |
+| **MoTekLab Markdown Converter** | [`markdown-converter/`](markdown-converter/README.md) | `v1.1.0` | Document Formatting & Export | [Launch Web App](https://md.moteklab.com) · [RTF & Arabic RTL Guide](https://www.moteklab.com/blog/md-converter-rtf-images-arabic-rtl-privacy-guide) |
+| **Fahhim AI Prompt Engineer** | Web & PWA | Live | Arabic/English Prompt Studio | [Launch Fahhim](https://fahhim.moteklab.com) · [Case Study](https://www.moteklab.com/blog/human-ai-synergy-scaling-fahhim-case-study) |
 
 ---
 
-## 🚀 Quick Install: MoTekLab MetaForge
+## Quick Install: MoTekLab MetaForge
 
 ### APT Repository (Debian / Ubuntu / Mint / Pop!_OS)
 
@@ -39,7 +42,7 @@ Binaries are attached directly to each release on GitHub:
 
 ---
 
-## 📁 Repository Layout
+## Repository Layout
 
 ```
 Distrib_Repo/
@@ -66,7 +69,7 @@ Distrib_Repo/
 
 ---
 
-## 🔒 Security & Privacy
+## Security & Privacy
 
 MoTekLab applications are built with strict privacy standards:
 - **Zero Embedded Credentials:** Never hardcodes developer tokens or secrets.
@@ -76,4 +79,4 @@ MoTekLab applications are built with strict privacy standards:
 
 ---
 
-© 2026 [MoTekLab](https://moteklab.com). All rights reserved.
+© 2026 [MoTekLab](https://www.moteklab.com). All rights reserved.
