@@ -1,5 +1,5 @@
 {
-  "version": "0.10.0",
-  "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/tag/v0.10.0",
-  "notes": "MoTekLab MetaForge v0.10.0: Instant in-place atomic MP4 tagging via mp4ameta, enhanced TV filename parser with season/episode and ancestor year discovery, flexible ±1-year search tolerance buffer, strict TV/Movie type isolation, full state reset, batch queue rename controls, Media Server XML (.nfo) export for Kodi/Jellyfin/Emby, Brand Rose & Ember styling, and CVE security patches."
+  "version": "0.10.2",
+  "url": "https://github.com/motaz-hefny/Distrib_Repo/releases/tag/v0.10.2",
+  "notes": "MoTekLab MetaForge v0.10.2: In-app release update notification dot and About dialog Check for Updates center with 1-click APT upgrade command copy; bounded Damerau-Levenshtein typo tolerance & punctuation/apostrophe invariance; two-tier TV series year matching; OMDb apostrophe fallback; instant in-place atomic MP4 tagging via mp4ameta; Kodi/Jellyfin/Emby XML .nfo exporter; and concurrent multi-source search."
 }

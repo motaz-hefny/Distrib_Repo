@@ -10,7 +10,7 @@ This repository serves as a centralized, organized release hub for all MoTekLab 
 
 | Project | Subfolder / Specs | Latest Release | Category | Direct Download / Info |
 |---|---|---|---|---|
-| **MoTekLab MetaForge** | [`metaforge/`](metaforge/README.md) | `v0.10.0` | Media Tagging & Organization | [Release Notes & Downloads](metaforge/README.md) |
+| **MoTekLab MetaForge** | [`metaforge/`](metaforge/README.md) | `v0.10.2` | Media Tagging & Organization | [Release Notes & Downloads](metaforge/README.md) |
 | **MoTekLab Proxy Suite** | [`proxy-suite/`](proxy-suite/README.md) | `v1.7.1` | Network Engineering & Scraping | [Release Notes & Downloads](proxy-suite/README.md) |
 | **MoTekLab Video Converter (`vconv`)** | [`vconv/`](vconv/README.md) | `v1.0.0` | Video Encoding & Remuxing | [Release Notes & Downloads](vconv/README.md) |
 | **MoTekLab VCEX Converter** | [`vcex-converter/`](vcex-converter/README.md) | `v1.2.0` | Certification & Exam Tooling | [Release Notes & Downloads](vcex-converter/README.md) |
