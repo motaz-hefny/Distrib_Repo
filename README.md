@@ -1,5 +1,7 @@
 # MoTekLab Public Software Distribution Hub (`Distrib_Repo`)
 
+![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Web-0ea5e9) ![Privacy](https://img.shields.io/badge/Telemetry-Zero-10b981) ![Languages](https://img.shields.io/badge/Languages-English%20%2B%20Arabic%20RTL-6366f1) ![Releases](https://img.shields.io/github/v/release/motaz-hefny/Distrib_Repo?label=Latest%20Release)
+
 ## What Is This Repository?
 
 **This is the official public release and package distribution hub for [MoTekLab](https://www.moteklab.com) applications.**
