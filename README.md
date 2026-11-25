@@ -38,12 +38,12 @@ Some MoTekLab applications are open source (with their full code in dedicated pu
 - **What it does:** A 100% browser-native workbench for real-time bidirectional conversion between Markdown, Rich Text, RTF 1.5 (Word & Scrivener compatible with embedded PNG/JPEG images), HTML, and PDF—with live Mermaid SVG diagrams, KaTeX math, Burner Mode panic purge, and native Arabic RTL Word export.
 - **Why use it:** Your documents never leave your browser—zero server uploads, zero accounts, zero tracking.
 - **Availability:** Free Web App (no installation required).
-- **Links:** [Launch md.moteklab.com](https://md.moteklab.com) · [RTF, Images & Arabic RTL Guide](https://www.moteklab.com/blog/md-converter-rtf-images-arabic-rtl-privacy-guide) · [Specs](markdown-converter/README.md)
+- **Links:** [Launch md.moteklab.com](https://md.moteklab.com) · [ChatGPT to Word](https://md.moteklab.com/chatgpt-to-word/) · [Claude & Gemini to Word](https://md.moteklab.com/claude-gemini-to-word/) · [Mermaid SVG/PDF](https://md.moteklab.com/mermaid-to-svg-pdf/) · [RTF, Images & Arabic RTL Guide](https://www.moteklab.com/blog/md-converter-rtf-images-arabic-rtl-privacy-guide) · [Specs](markdown-converter/README.md)
 
 ### 5. Fahhim AI Prompt Engineer — Arabic & English Structured Prompt Studio
 - **What it does:** Guides creators, developers, and teams through proven prompt frameworks (COSTAR, ICDF, RCR-EOC, MICRO) to generate high-precision prompts for ChatGPT, Claude, Gemini, and Llama, with native Arabic (MSA & Egyptian Masri) RTL support and local browser storage.
 - **Availability:** Free Web App, PWA & Android.
-- **Links:** [Launch fahhim.moteklab.com](https://fahhim.moteklab.com) · [Prompt Library](https://fahhim.moteklab.com/prompts) · [Case Study](https://www.moteklab.com/blog/human-ai-synergy-scaling-fahhim-case-study)
+- **Links:** [Launch fahhim.moteklab.com](https://fahhim.moteklab.com) · [Arabic ChatGPT Prompts](https://fahhim.moteklab.com/prompts/chatgpt-arabic) · [AI Video Prompts](https://fahhim.moteklab.com/prompts/video) · [Prompt Library](https://fahhim.moteklab.com/prompts) · [Case Study](https://www.moteklab.com/blog/human-ai-synergy-scaling-fahhim-case-study)
 
 ### 6. MoTekLab VCEX Converter (`v1.2.0`) — Certification & Exam Format Tooling
 - **What it does:** High-fidelity exam format conversion, blueprint verification, and lossless JSON/VCEX roundtripping for certification study workflows.
